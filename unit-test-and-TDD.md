@@ -39,18 +39,58 @@ Now we have to write the minimum code necessary to make the test pass. We're not
 ```
 *Test case* **FAIL**  
 
-**Step 2** *Write the function to pass the test case* 
+**Step 2**  
+*Write the function to pass the test case* 
 *Source code*  
 ```typescript 
 export function add(){
 
 }
 ```
-Run the test case  
+Run the test  
+*case 1*  PASS
 
-Test case **PASS**  
+**Step 3**  
+*Add new test case as per requirement*  
 
-**Step 3**
+```typescript
+ describe("test add fun",()=>{
 
+    it("should exist",()=>{
+        expect(add).toBeTruthy();
+    })
+    it("should exist",()=>{
+        expect(add(1,2)).toBe(3);
+    })
+  }
+```
+Run the test again  
+*case 1* PASS  
+*case 2* FAIL  
 
+**Step 4**  
+
+*Refactor the source code*
+```typescript
+export function add(num1:number, num2:number){
+return num1+num2;
+}  
+```
+**Step 5**  
+*Run the test case to PASS*  
+
+```typescript
+ describe("test add fun",()=>{
+
+    it("should exist",()=>{
+        expect(add).toBeTruthy();
+    })
+    it("should exist",()=>{
+        expect(add(1,2)).toBe(3);
+    })
+  }
+```
+Run the test again  
+*case 1* PASS   
+*case 2* PASS  
 
