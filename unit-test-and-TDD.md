@@ -27,7 +27,7 @@ Now we have to write the minimum code necessary to make the test pass. We're not
  **Example**  
  Let's take an example for testing the ``` add()``` function, which will add the number and return the result using **JEST**.
 
- **Step 1**  
+ **Step 1** : 
  *write the first test case* 
 ```typescript
  describe("test add fun",()=>{
@@ -37,5 +37,20 @@ Now we have to write the minimum code necessary to make the test pass. We're not
     })
   }
 ```
-<span style="color: red;">FAIL</span>
+*Test case* **FAIL**  
+
+**Step 2** *Write the function to pass the test case* 
+*Source code*  
+```typescript 
+export function add(){
+
+}
+```
+Run the test case  
+
+Test case **PASS**  
+
+**Step 3**
+
+
 
